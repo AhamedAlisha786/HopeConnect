@@ -1,0 +1,245 @@
+.explore-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+.explore-header {
+  background: var(--gradient-hero);
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .explore-header {
+    padding: 96px 0;
+  }
+}
+
+.explore-header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .explore-header-container {
+    padding: 0 24px;
+  }
+}
+
+.explore-header-content {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.explore-title {
+  margin-bottom: 16px;
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .explore-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .explore-title {
+    font-size: 3rem;
+  }
+}
+
+.explore-description {
+  margin-bottom: 32px;
+  color: hsl(var(--muted-foreground));
+}
+
+.explore-search {
+  display: flex;
+  gap: 12px;
+}
+
+.explore-search-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.explore-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  color: hsl(var(--muted-foreground));
+}
+
+.explore-search-input {
+  padding-left: 40px;
+  height: 48px;
+}
+
+.explore-filter-btn {
+  height: 48px;
+  width: 48px;
+}
+
+.explore-grid-section {
+  padding: 48px 0;
+}
+
+@media (min-width: 768px) {
+  .explore-grid-section {
+    padding: 64px 0;
+  }
+}
+
+.explore-grid-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .explore-grid-container {
+    padding: 0 24px;
+  }
+}
+
+.explore-grid {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .explore-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .explore-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.need-card {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.need-card:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-4px);
+}
+
+.need-card-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.need-card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.need-card:hover .need-card-image img {
+  transform: scale(1.05);
+}
+
+.need-card-urgency {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.need-card-urgency.high {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.need-card-urgency.medium {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.need-card-urgency.low {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.need-card-content {
+  padding: 20px;
+}
+
+.need-card-title {
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.need-card-location {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.need-card-location svg {
+  height: 16px;
+  width: 16px;
+}
+
+.need-card-tags {
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.need-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 9999px;
+  background-color: hsl(var(--muted));
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+
+.need-tag svg {
+  height: 12px;
+  width: 12px;
+}
+
+.explore-empty {
+  padding: 64px 0;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}

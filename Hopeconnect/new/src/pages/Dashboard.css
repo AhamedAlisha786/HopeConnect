@@ -1,0 +1,173 @@
+.dashboard-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+.dashboard-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-container {
+    padding: 32px 24px;
+  }
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .dashboard-header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.dashboard-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .dashboard-title {
+    font-size: 1.875rem;
+  }
+}
+
+.dashboard-subtitle {
+  color: hsl(var(--muted-foreground));
+}
+
+.stats-grid {
+  margin-bottom: 32px;
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.stat-card-header {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-card-icon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: hsl(var(--primary) / 0.1);
+}
+
+.stat-card-icon svg {
+  height: 20px;
+  width: 20px;
+  color: hsl(var(--primary));
+}
+
+.stat-card-change {
+  border-radius: 9999px;
+  background-color: hsl(var(--accent) / 0.2);
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--accent));
+}
+
+.stat-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.stat-card-label {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.donations-card {
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  box-shadow: var(--shadow-card);
+}
+
+.donations-header {
+  border-bottom: 1px solid hsl(var(--border));
+  padding: 24px;
+}
+
+.donations-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.donations-list {
+  border-top: none;
+}
+
+.donation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.donation-item:last-child {
+  border-bottom: none;
+}
+
+.donation-donor {
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.donation-item-name {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.donation-amount {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  text-align: right;
+}
+
+.donation-date {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}

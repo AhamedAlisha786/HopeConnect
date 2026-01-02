@@ -1,0 +1,240 @@
+.stories-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+.stories-header {
+  background: var(--gradient-hero);
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .stories-header {
+    padding: 96px 0;
+  }
+}
+
+.stories-header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .stories-header-container {
+    padding: 0 24px;
+  }
+}
+
+.stories-header-content {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stories-title {
+  margin-bottom: 16px;
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .stories-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stories-title {
+    font-size: 3rem;
+  }
+}
+
+.stories-description {
+  color: hsl(var(--muted-foreground));
+}
+
+.stories-grid-section {
+  padding: 48px 0;
+}
+
+@media (min-width: 768px) {
+  .stories-grid-section {
+    padding: 64px 0;
+  }
+}
+
+.stories-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .stories-container {
+    padding: 0 24px;
+  }
+}
+
+.stories-grid {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.story-card {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  box-shadow: var(--shadow-elevated);
+}
+
+.story-card-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.story-card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-card-image img {
+  transform: scale(1.05);
+}
+
+.story-card-content {
+  padding: 24px;
+}
+
+.story-orphanage-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  border-radius: 9999px;
+  background-color: hsl(var(--primary) / 0.1);
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--primary));
+}
+
+.story-card-title {
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.story-card-text {
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.story-donor-count {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: hsl(var(--cream-dark));
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .testimonials-section {
+    padding: 96px 0;
+  }
+}
+
+.testimonials-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-container {
+    padding: 0 24px;
+  }
+}
+
+.testimonials-title {
+  margin-bottom: 48px;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial-card {
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+}
+
+.testimonial-icon {
+  margin-bottom: 16px;
+  height: 40px;
+  width: 40px;
+  color: hsl(var(--primary) / 0.3);
+}
+
+.testimonial-quote {
+  margin-bottom: 24px;
+  font-size: 1.125rem;
+  font-style: italic;
+  color: hsl(var(--foreground));
+}
+
+.testimonial-name {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.testimonial-role {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}

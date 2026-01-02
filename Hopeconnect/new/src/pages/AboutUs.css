@@ -1,0 +1,266 @@
+.about-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+.about-header {
+  background: var(--gradient-hero);
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .about-header {
+    padding: 96px 0;
+  }
+}
+
+.about-header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .about-header-container {
+    padding: 0 24px;
+  }
+}
+
+.about-header-content {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-title {
+  margin-bottom: 16px;
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-title {
+    font-size: 3rem;
+  }
+}
+
+.about-subtitle {
+  font-size: 1.125rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Our Story Section */
+.story-section {
+  padding: 48px 0;
+}
+
+@media (min-width: 768px) {
+  .story-section {
+    padding: 64px 0;
+  }
+}
+
+.story-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .story-container {
+    padding: 0 24px;
+  }
+}
+
+.story-content {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-title {
+  margin-bottom: 24px;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .story-title {
+    font-size: 1.875rem;
+  }
+}
+
+.story-text {
+  margin-bottom: 16px;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Values Section */
+.values-section {
+  background-color: hsl(var(--cream-dark));
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .values-section {
+    padding: 96px 0;
+  }
+}
+
+.values-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .values-container {
+    padding: 0 24px;
+  }
+}
+
+.values-title {
+  margin-bottom: 48px;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .values-title {
+    font-size: 1.875rem;
+  }
+}
+
+.values-grid {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 640px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.value-item {
+  text-align: center;
+}
+
+.value-icon {
+  margin: 0 auto 16px;
+  display: flex;
+  height: 56px;
+  width: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: hsl(var(--primary) / 0.1);
+}
+
+.value-icon svg {
+  height: 28px;
+  width: 28px;
+  color: hsl(var(--primary));
+}
+
+.value-title {
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.value-description {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Team Section */
+.team-section {
+  padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+  .team-section {
+    padding: 96px 0;
+  }
+}
+
+.team-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .team-container {
+    padding: 0 24px;
+  }
+}
+
+.team-title {
+  margin-bottom: 48px;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+@media (min-width: 768px) {
+  .team-title {
+    font-size: 1.875rem;
+  }
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member-image {
+  margin: 0 auto 16px;
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+}
+
+.team-member-name {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.team-member-role {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
