@@ -14,6 +14,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const location = useLocation();
 
   return (
@@ -41,16 +42,37 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Auth Buttons */}
-        <div className="navbar-auth">
-          <Link to="/login">
-            <Button variant="ghost" size="sm">
-              Log In
-            </Button>
-          </Link>
-          {/* <Link to="/register">
-            <Button size="sm">Register Orphanage</Button>
-          </Link> */}
-        </div>
+      <div className="navbar-auth">
+  <div className="dropdown">
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={() => setOpen(!open)}
+    >
+      Log In
+    </Button>
+
+    {open && (
+      <div className="dropdown-menu">
+        <Link
+          to="/user-login"
+          className="dropdown-item"
+          onClick={() => setOpen(false)}
+        >
+          User Login
+        </Link>
+        <Link
+          to="/login"
+          className="dropdown-item"
+          onClick={() => setOpen(false)}
+        >
+          Orphanage Login
+        </Link>
+      </div>
+    )}
+  </div>
+</div>
+
 
         {/* Mobile Menu Button */}
         <button

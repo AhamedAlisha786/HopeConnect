@@ -1,64 +1,57 @@
-const Orphanage = require("../model/model");
+const Donor = require("../model/models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // REGISTER
-exports.registerOrphanage = async (req, res) => {
+exports.Donorregister = async (req, res) => {
   try {
     const {
-      orphanagename,
+      name,
       email,
-      ContactNumber,
-      address,
-      about,
       password,
     } = req.body;
     console.log("api is hitting");
-    const existing = await Orphanage.findOne({ email });
+    const existing = await Donor.findOne({ email });
     if (existing) {
       return res.status(400).json({ message: "Email already exists" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const orphanage = new Orphanage({
-      orphanagename,
-      email,
-      ContactNumber,
-      address,
-      about,
+    const donor = new Donor({
+        name,
+        email,
       password: hashedPassword,
     });
 
-    await orphanage.save();
-
+    await donor.save();
     res.status(201).json({
-      message: "Orphanage registered successfully",
+      message: "Donor registered successfully",
     });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
 };
 
-exports.loginOrphanage = async (req, res) => {
+exports.Donorlogin = async (req, res) => {
   try {
     const { email, password } = req.body;
     console.log("Login API hit");
     // 1. Check email
-    const orphanage = await Orphanage.findOne({ email });
-    if (!orphanage) {
+    const donor = await Donor.findOne({ email });
+    if (!donor) {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
     // 2. Compare password
-    const isMatch = await bcrypt.compare(password, orphanage.password);
+    const isMatch = await bcrypt.compare(password, donor.password);
     if (!isMatch) {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
     // 3. Generate JWT
     const token = jwt.sign(
-      { id: orphanage._id ,role:orphanage.role},
+      { id: donor._id,role:donor.role },
       process.env.JWT_SECRET,
       { expiresIn: "7d" }
     );
@@ -66,10 +59,10 @@ exports.loginOrphanage = async (req, res) => {
     res.status(200).json({
       message: "Login successful",
       token,
-      orphanage: {
-        id: orphanage._id,
-        orphanagename: orphanage.orphanagename,
-        email: orphanage.email,
+      donor: {
+        id: donor._id,
+        name: donor.name,
+        email: donor.email,
       },
     });
   } catch (error) {

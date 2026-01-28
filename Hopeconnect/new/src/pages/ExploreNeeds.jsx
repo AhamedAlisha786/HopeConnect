@@ -3,7 +3,7 @@ import { Search, Filter, Heart, MapPin, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import "./ExploreNeeds.css";
-
+import { useNavigate } from "react-router-dom";
 const mockNeeds = [
   {
     id: 1,
@@ -41,6 +41,7 @@ const mockNeeds = [
 
 const ExploreNeeds = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const filteredNeeds = mockNeeds.filter(
     (item) =>
@@ -109,7 +110,9 @@ const ExploreNeeds = () => {
                     ))}
                   </div>
 
-                  <Button className="w-full" variant="hero" size="sm">
+                  <Button className="w-full" variant="hero" size="sm" onClick={()=>{
+                    navigate('/user-register')
+                  }}>   
                     <Heart className="h-4 w-4" />
                     Donate Now
                   </Button>

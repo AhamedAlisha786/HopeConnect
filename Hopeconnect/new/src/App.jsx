@@ -13,6 +13,9 @@ import Dashboard from "./pages/Dashboard";
 import SuccessStories from "./pages/SuccessStories";
 import AboutUs from "./pages/AboutUs";
 import FindOrphanages from "./pages/FindOrphanages";
+import Orphanage from "./pages/Orphanage";
+import RegisterUser from "./pages/RegisterUser";
+import UserLogin from "./pages/Userlogin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +39,9 @@ const App = () => (
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/find-orphanages" element={<FindOrphanages />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/map" element={< Orphanage/>} />
+              <Route path="/user-register" element={< RegisterUser/>} />
+              <Route path="/user-login" element={< UserLogin/>} />
             </Routes>
           </main>
           <Footer />
